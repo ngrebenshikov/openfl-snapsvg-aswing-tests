@@ -104,7 +104,7 @@ class Buttons extends JPanel{
 		combo2.setSelectedIndex(0);
 		combo2.setPreferredWidth(120);
 		combo2.setEditable(false);
-		var combo3:JComboBox = new JComboBox(["Disabled"]);
+		var combo3:JComboBox = new JComboBox(["Disabled","This is", "disabled", "!"]);
 		combo3.setPreferredWidth(80);
 		combo3.setSelectedIndex(0);
 		combo3.setEnabled(false);

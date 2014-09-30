@@ -5,7 +5,7 @@
     <!-- output -->
     <app main="Main" file="openfl-svg-aswing-tests" path="bin" />
 
-    <window width="1024" height="768" background="0xFFFFFF" fps="30"/>
+    <window width="0" height="0" background="0xFFFFFF" fps="30"/>
 
     <!-- classpath, haxe libs -->
     <source path="src" />
