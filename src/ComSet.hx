@@ -1,6 +1,7 @@
 package;
 
 
+import openfl.events.Event;
 import componetset.Buttons;
 import componetset.Scrolls;
 import componetset.Containers;
@@ -55,15 +56,19 @@ import org.aswing.Insets;
 		
 		WINDOW.setBorder(new EmptyBorder(null, new Insets(4, 4, 4, 4)));
 		WINDOW.setContentPane(tabpane);
-		WINDOW.setSizeWH(800, 600);
+		WINDOW.setSizeWH(stage.stageWidth, stage.stageHeight);
 		WINDOW.show();
+
+        stage.addEventListener(Event.RESIZE, function(e) {
+            WINDOW.setSizeWH(stage.stageWidth, stage.stageHeight);
+        });
 		
 		return;
 		
-		var textField:TextField = new TextField();
-		textField.text = "1111";
-		textField.type = TextFieldType.INPUT;
-		addChild(textField);
+//		var textField:TextField = new TextField();
+//		textField.text = "1111";
+//		textField.type = TextFieldType.INPUT;
+//		addChild(textField);
 	}
 	
 }
