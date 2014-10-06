@@ -10,16 +10,8 @@ import componetset.Windows;
 import componetset.Menus;
 import componetset.Decorators;
 import flash.display.Sprite;
-import flash.display.StageScaleMode;
 import flash.Lib;
-import flash.text.TextField;
-import flash.text.TextFieldType;
-import org.aswing.AsWingManager;
-import org.aswing.AWSprite;
-import org.aswing.Component;
 import org.aswing.JTabbedPane;
-import org.aswing.JTextComponent;
-import org.aswing.JTextField;
 import org.aswing.JWindow;
 import org.aswing.UIManager;
 import org.aswing.SolidBackground;
@@ -33,9 +25,6 @@ import org.aswing.Insets;
 	public function new(){
 		super();
  
-		 
-
-		// return;
 		WINDOW = new JWindow(this);
 		
 		tabpane = new JTabbedPane(); 
@@ -48,27 +37,17 @@ import org.aswing.Insets;
 		tabpane.append(new Menus());
 		
 		tabpane.append(new Decorators());
-		
-		
-		
-		
-		WINDOW.setBackgroundDecorator(new SolidBackground(UIManager.getColor("window"))); 
+
+		WINDOW.setBackgroundDecorator(new SolidBackground(UIManager.getColor("window")));
 		
 		WINDOW.setBorder(new EmptyBorder(null, new Insets(4, 4, 4, 4)));
 		WINDOW.setContentPane(tabpane);
-		WINDOW.setSizeWH(stage.stageWidth, stage.stageHeight);
+		WINDOW.setSizeWH(Lib.current.stage.stageWidth, Lib.current.stage.stageHeight);
 		WINDOW.show();
 
-        stage.addEventListener(Event.RESIZE, function(e) {
-            WINDOW.setSizeWH(stage.stageWidth, stage.stageHeight);
+        Lib.current.stage.addEventListener(Event.RESIZE, function(e) {
+            WINDOW.setSizeWH(Lib.current.stage.stageWidth, Lib.current.stage.stageHeight);
         });
-		
-		return;
-		
-//		var textField:TextField = new TextField();
-//		textField.text = "1111";
-//		textField.type = TextFieldType.INPUT;
-//		addChild(textField);
 	}
 	
 }
